@@ -1,11 +1,13 @@
 import Navbar from "./components/navbar/Navbar";
 import "./app.scss";
 import Test from "./Test";
+import Hero from "./components/hero/Hero";
 
 const App = () => {
   return <div>
     <section>
       <Navbar />
+      <Hero />
     </section>
     <section id="Homepage">Parallax</section>
     <section id="Services">Services</section>
