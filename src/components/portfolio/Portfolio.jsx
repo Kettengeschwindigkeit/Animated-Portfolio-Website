@@ -1,30 +1,30 @@
+import "./portfolio.scss";
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import "./portfolio.scss";
 
 const items = [
   {
     id: 1,
     title: "ReactJS",
-    img: "https://static.tildacdn.com/tild3566-3031-4338-b131-356131306138/8.jpg",
+    img: "https://blog.depositphotos.com/ru/wp-content/uploads/2019/11/Active-Theory-v4.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis doloremque quia magnam fugit eius laborum molestiae voluptas id voluptate."
   },
   {
     id: 2,
     title: "NextJS",
-    img: "https://images01.nicepagecdn.com/page/11/88/ru/dizayn-sayta-118801.jpg",
+    img: "https://inbenefit.com/wp-content/uploads/2017/12/%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D1%8B-%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0-%D0%B1%D0%BB%D0%BE%D0%B3%D0%B0-%D0%B8-ecommerce-03.jpg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis doloremque quia magnam fugit eius laborum molestiae voluptas id voluptate."
   },
   {
     id: 3,
     title: "Vanilla JS",
-    img: "https://images01.nicepagecdn.com/page/11/06/ru/dizayn-sayta-110615.jpg",
+    img: "https://static.tildacdn.com/tild3566-3031-4338-b131-356131306138/8.jpg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis doloremque quia magnam fugit eius laborum molestiae voluptas id voluptate."
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images01.nicepagecdn.com/page/10/88/ru/dizayn-sayta-108822.jpg",
+    title: "ReactJS",
+    img: "https://german-web.org/wp-content/uploads/2023/03/alpin.png",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis doloremque quia magnam fugit eius laborum molestiae voluptas id voluptate."
   }
 ];
