@@ -1,12 +1,12 @@
 import { useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./portfolio.scss";
 
 const items = [
   {
     id: 1,
     title: "ReactJS",
-    img: "https://images01.nicepagecdn.com/page/48/71/ru/dizayn-sayta-48719.jpg",
+    img: "https://static.tildacdn.com/tild3566-3031-4338-b131-356131306138/8.jpg",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis doloremque quia magnam fugit eius laborum molestiae voluptas id voluptate."
   },
   {
@@ -30,7 +30,28 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>;
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({ target: ref });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  return (
+    <section>
+      <div className="container">
+        <div className="wrapper">
+          <div className="image-container" ref={ref}>
+            <img src={item.img} alt="" />
+          </div>
+          <motion.div className="text-container" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>See Demo</button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 const Portfolio = () => {
